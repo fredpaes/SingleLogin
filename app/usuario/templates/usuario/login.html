@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,28 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="stylesheet" href="{% static 'usuario/css/login.css' %}">
 </head>
 <body>
     <div class = "contenedor">
         <section class="span">
-            <span><b>Login form</b></span>
+            <span><b>Bienvenido</b></span>
         </section>
+        <form method="POST">
         <section class="formulario">
             <div class="username">
-                <input type="text"
-                placeholder="Nombre de usuario"
-                >
-                <!-- <img src="./imagenes/usuario.svg" alt=""> -->
+                <input type="text" placeholder="Nombre de usuario">
             </div>
             <div class="password">
-                <input type="password"
-                placeholder="Contraseña">
-                <!-- <img src="./imagenes/candado.svg" alt=""> -->
+                <input type="password" placeholder="Contraseña">
             </div>
             <div class="button">
                 <button>Entrar</button>
             </div>
         </section>
+        </form>
     </div>
 </body>
 </html>
