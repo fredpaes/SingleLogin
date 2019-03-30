@@ -16,7 +16,7 @@ def log_in(request):
             login(request, user)
             return redirect('index')
         else:
-            messages.error(request, ('El usuario no se encuentra activo.'))
+            messages.info(request, ('El usuario no se encuentra activo.'))
         return render(request, 'usuario/login.html')
     else:
         return render(request, 'usuario/login.html')
