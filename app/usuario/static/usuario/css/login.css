@@ -1,0 +1,51 @@
+
+body{
+    background-image: linear-gradient(to right , rgb(34, 20, 46), rgb(63, 28, 63), rgb(34, 20, 46));
+    padding-top: 230px;
+
+}
+.contenedor{
+    background-color: #724d75;
+    width: 350px;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 5px;
+    
+}
+.span{
+    padding: 5%;
+}
+.formulario{
+    background-color:#fff;
+padding:  15px 18px ;
+
+border-radius: 0px 0px 5px 5px; 
+}
+
+
+.username{
+    /* border: 1px solid black; */
+}
+.username input {
+width: 303px;
+padding: 3.2px;
+}
+.password {
+    margin-top: 10px;
+
+}
+.password input {
+    width: 303px;
+    padding: 3.2px;
+}
+.button{
+    margin-top: 15px;
+}
+.button button{
+    background-color: #724d75;
+    color:white;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+}
