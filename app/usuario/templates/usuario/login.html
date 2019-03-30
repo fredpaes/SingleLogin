@@ -14,12 +14,13 @@
             <span><b>Bienvenido</b></span>
         </section>
         <form method="POST">
+            {% csrf_token %}
         <section class="formulario">
             <div class="username">
-                <input type="text" placeholder="Nombre de usuario">
+                <input type="text" placeholder="Nombre de usuario" name="username">
             </div>
             <div class="password">
-                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Contraseña" name="password">
             </div>
             <div class="button">
                 <button>Entrar</button>
