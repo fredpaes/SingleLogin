@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SISTEMA{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <!-- INICIO NAVBAR -->
+    <ul>
+        <li><a href="#Icono_empresa">Icono de la empresa</a>   </li> 
+        <li><a href="#Bienvenida">Bienvenido {{ user }}</a>
+            <details>
+                    <p>opcion1</p>
+                    <p>opcion2</p>
+            </details>
+        </li>
+        <li><a href="{% url 'c_p' %}">Cambiar password</a>    </li>
+        <li><a href="{% url 'logout' %}">Cerrar sesion</a>    </li>
+    </ul>
+    <!-- FIN NAVBAR -->
+    {% block html %}
+    {% endblock %}
+    <footer>
+        <span>Este es el footer</span>
+    </footer>
+    {% block js %}{% endblock %}
+</body>
+</html>

@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{% static 'usuario/css/login.css' %}">
 </head>
 <body>
+    {% if messages %}
+    {% for msg in messages %}
+    <span>{{ msg }}</span>
+    {% endfor %}
+    {% endif %}
     <div class = "contenedor">
         <section class="span">
             <span><b>Bienvenido</b></span>
@@ -23,7 +28,7 @@
                 <input type="password" placeholder="Contraseña" name="password">
             </div>
             <div class="button">
-                <button>Entrar</button>
+                <button type="submit">Entrar</button>
             </div>
         </section>
         </form>

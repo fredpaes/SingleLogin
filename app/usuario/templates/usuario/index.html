@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Principal</title>
-</head>
-<body>
-    <ul>
-            <li><a href="#Icono_empresa">Icono de la empresa</a>   </li> 
-            <li><a href="#Bienvenida">Bienvenida</a>
-        
-                        <details>
-                                <p>opcion1</p>
-                                <p>opcion2</p>
-                        </details>
-         
-             </li>
-            <li><a href="./Cambiar_password.html">Cambiar password</a>    </li>
-            <li><a href="#Cerrar_sesion">Cerrar sesion</a>    </li>
-        </ul>
+{% extends 'core/base.html' %}
+
+{% block title %} - Inicio{% endblock %}
+
+{% block html %}
 <h2>Misión</h2>
 <p>Ser una empresa que trabaja para brindar a sus clientes la mayor diversidad en 
     materiales de construcción y de ferretería en general, bajo premisas de precio, 
@@ -35,12 +17,10 @@
      nuestros clientes, gracias al apoyo incondicional de un comprometido equipo de trabajo, 
      permitiéndonos así sostener un alto grado de responsabilidad social y comercial que nos 
      garantice solidez financiera y crecimiento sostenible</p>
-            
 
-    
-    
-
-
-
-</body>
-</html>
+<ul>
+    <li>uno</li>
+    <li>dos</li>
+    <li>tres</li>
+</ul>
+{% endblock %}

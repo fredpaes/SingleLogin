@@ -1,32 +1,32 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 # Create your views here.
 def log_in(request):
-    if request.method is 'POST':
+    if request.method == 'POST':
         # autenticación
-        u_name = request.POST.get('username')
-        u_pass = request.POST.get('password')
-        user = authenticate(request, username=u_name, password=u_pass)
+        u_name = request.POST['username']
+        u_pass = request.POST['password']
+        user = authenticate(username=u_name, password=u_pass)
         if user is None:
-            # el usuario esta mal
-            pass
+            messages.error(request, ('Error en los credenciales.'))
         elif user.is_active:
-            # login
             login(request, user)
             return redirect('index')
         else:
-            # el usuario no esta activo
-            pass
+            messages.error(request, ('El usuario no se encuentra activo.'))
+        return render(request, 'usuario/login.html')
     else:
         return render(request, 'usuario/login.html')
 
 def log_out(request):
-    pass
+    logout(request)
+    return redirect('login')
 
 def cambio_password(request):
-    pass
+    return render(request, 'usuario/cambiar_password.html')
 
 def home(request):
     return render(request, 'usuario/index.html')
